@@ -1,0 +1,64 @@
+// X-Small	None	
+// Small	sm	
+// Medium	md	
+// Large	lg	
+// Extra large	xl	
+// Extra extra large	xxl
+
+$xs-max: 480px;
+
+$sm-min: 481px;
+$sm-max: 768px;
+
+$md-min: 769px;
+$md-max: 1024px;
+
+$lg-min: 1025px;
+$lg-max: 1200px;
+
+$xl-max: 1201px;
+$xl-min: 1399px;
+
+$xxl-min: 1400px;
+
+
+//retrato
+//  entre 0 e 480px
+@mixin xs {
+    @media (max-width: #{$xs-max}) {
+        @content;
+    }
+}
+// de 481px até 768px
+@mixin sm {
+    @media (min-width: #{$sm-min}) and (max-width: #{$sm-max}) {
+        @content;
+    }
+}
+
+// de 769px até 1024px
+@mixin md {
+    @media (min-width: #{$md-min}) and (max-width: #{$md-max}) {
+        @content;
+    }
+}
+
+// de 1025px até 1200px
+@mixin lg {
+    @media (min-width: #{$lg-min}) and (max-width: #{$lg-max}) {
+        @content;
+    }
+}
+
+// de 1201px até 1399px
+@mixin xl {
+    @media (min-width: #{$xl-min}) and (max-width: #{$xl-max}) {
+        @content;
+    }
+}
+// de 1400px em diante
+@mixin xxl {
+    @media (min-width: #{$xxl-min}) {
+        @content;
+    }
+}

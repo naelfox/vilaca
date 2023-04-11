@@ -1,0 +1,19 @@
+.error-content {
+    text-align: center;
+    background-color: $corI;
+    color: #fff;
+    height: 100vh;
+
+    img {
+        @include altura-largura-equivalente(150px);
+    }
+
+    #panel-erro {
+        position: relative;
+        top: 17%;
+    }
+
+    h2, p {
+        color: $corIV;
+    }
+}

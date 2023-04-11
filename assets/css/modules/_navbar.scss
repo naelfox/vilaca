@@ -1,0 +1,80 @@
+@import '../abstracts/variables';
+
+nav {
+    height: 72px;
+    overflow-y: hidden;
+
+
+    .navbar-toggler {
+
+        &:focus {
+            box-shadow: none !important;
+            transition: 0.5s;
+            i {
+                color: $corVI;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    .navbar-brand {
+
+        opacity: 0.8;
+        transition: 0.5s;
+
+        &:hover {
+            opacity: 1;
+            transition: 1s;
+        }
+
+        img {
+            position: absolute;
+            bottom: 9px;
+        }
+    }
+
+    .navbar-nav {
+        position: fixed;
+
+        @media (max-width: 991px) {
+            right: 23px;
+            top: 71px;
+            background: #000000cf;
+            border-radius: 7px;
+            padding: 6px 21px;
+            margin: 1px -6px;
+        }
+    }
+
+    .nav-link {
+        img {
+            width: 15px;
+            padding: 0 1px 4px 0;
+            margin: 0 2px 0 0;
+        }
+    }
+
+    li {
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: 0.9s;
+
+        &:hover {
+            transition: 0.9s;
+            border-bottom: 2px solid $link-hover;
+            opacity: 1;
+        }
+    }
+
+
+    .active {
+        border-bottom: 2px solid $link-decoration;
+    }
+
+
+
+}
+
+// $link-decoration: #4A4380;
+// $link-hover: #7C79BE;

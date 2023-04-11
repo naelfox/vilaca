@@ -1,0 +1,40 @@
+// @import '../abstracts/';
+.card {
+    padding: 18px;
+    border: 1px solid rgba(140, 137, 206, 0.18);
+    box-shadow: 4px 4px 11px 1px rgb(0 0 0 / 8%);
+    border-radius: 16px;
+
+    .card-body {
+        padding: 1rem 0rem;
+    }
+
+    img {
+        border-radius: 16px;
+    }
+
+    h5 {
+        color: $corII;
+        overflow:hidden;
+    }
+
+    h2 {
+        color: $corII;
+    }
+
+    p {
+        color: $corIII !important;
+        line-height: 19px;
+        padding: 4px 1px;
+        margin: 0;
+    }
+
+    a {
+        text-align: end;
+        color: $link-decoration;
+        text-decoration: none;
+        &:hover {
+            color: $link-hover;
+        }
+    }
+}

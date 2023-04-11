@@ -1,0 +1,43 @@
+@mixin altura-largura-equivalente($tamanho) {
+    width: $tamanho;
+    height: $tamanho;
+}
+
+@mixin god-and-adan-responsive-position {
+    @include xs {
+        width: 499px;
+        bottom: 118px;
+        left: -37px;
+    }
+
+    @include sm {
+        width: 886px;
+        bottom: 87px;
+        left: -76px;
+    }
+
+    @include md {
+        width: 919px;
+        bottom: 75px;
+        left: 10px;
+    }
+
+    @include lg {
+        width: 992px;
+        bottom: 64px;
+        left: 73px;
+    }
+
+    @include xl {
+        bottom: 42px;
+        left: 197px;
+    }
+
+    @include xxl {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+}
