@@ -14,7 +14,7 @@ var app = createApp({
                 perseu: './img/perseu-e-andromedra.png',
             },
             currentTemplate: '',
-            teste: 'olá'
+            year: new Date().getFullYear()
         }
     },
     created() {
@@ -43,10 +43,11 @@ var app = createApp({
             window.history.pushState(`${pageName}`, `${pageName}`, `/${pageName}`);
         },
         loadPage(page) {
+
             if (this.pageExists(page)) {
                 this.addPage(page);
-
             } else {
+           
                 this.spinner = true
                 this.addNewPage(page);
 
@@ -77,6 +78,9 @@ var app = createApp({
         },
         async addNewPage(pageName) {
 
+
+           
+
             const contentPage = await this.getContentPage(pageName);
 
             this.currentTemplate = contentPage;
@@ -90,8 +94,10 @@ var app = createApp({
         },
         async getContentPage(pageName) {
 
+            
+
             return fetch(`views/${pageName}.html`, {
-                method: 'POST'
+                method: 'GET'
             }).then(function (response) {
                 return response.text();
             }).then(function (html) {
@@ -138,3 +144,13 @@ var app = createApp({
     }
 
 }).mount('#app');
+
+
+
+
+
+
+// const now = new Date();
+// const year = now.getFullYear();
+// console.log(now);
+
